@@ -1,0 +1,92 @@
+@import '../../styles/colors.scss';
+
+ .workspace {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    background-color: $c-white;
+    padding: 16px;
+    border-radius: 8px;
+
+    &:hover{
+        background-color: $c-selago;
+    }
+
+    &.active {
+        background-color: $c-selago;
+    }
+
+    &.edit {
+        padding: 0;
+    }
+
+    &-icon {
+        background-color: $c-casper;
+        border-radius: 8px;
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &-name {
+        width: 148px;
+        margin: 0 12px;
+        text-align: left;
+    }
+
+    &-input {
+        margin: 0 0 0 12px;
+        padding: 6px 2px;
+        max-width: 200px;
+   
+        &.edit {
+            width: 162px;
+            margin: 0 12px;
+        }
+
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &-save {
+        width: 100%;
+        background-color: $c-blue;
+        color: $c-white;
+        border: none;
+        border-radius: 4px;
+        margin-bottom: 16px;
+
+        &:disabled {
+            background-color: $c-mishka;
+            border: 1px solid $c-chatelle;
+            color: $c-smoky;
+            cursor: not-allowed;
+            path {
+                fill: $c-smoky;
+            }
+        }
+
+        span {
+            margin: 0 0 0 6px;
+        }
+    }
+
+
+
+    &-create {
+        margin-bottom: 16px;
+        border-radius: 4px;
+        border: 1px solid $c-catskill;
+        width: 100%;
+        background-color: $c-white;
+        box-shadow: 0px 0px 1px 0px rgba(18, 3, 62, 0.11), 0px 3px 5px 0px rgba(18, 3, 62, 0.10);
+
+        .create-name{
+            margin: 0 0 0 6px;
+        }
+    }
+ }

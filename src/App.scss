@@ -1,0 +1,87 @@
+@import './styles/colors.scss';
+
+.container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    padding: 16px;
+    min-height: 540px;
+
+    .ant-checkbox-inner {
+        width: 12px;
+        height: 12px;
+        border-width: 1px;
+        border-radius: 2px;
+        border-color: $c-mishka-dark;
+      }
+      .ant-checkbox-checked .ant-checkbox-inner {
+        background-color: $c-blue;
+        border-color: $c-blue;
+        width: 12px;
+        height: 12px;
+
+        &::after {
+            width: 3.5px;
+            height: 7px;
+          }
+      }
+}
+
+.name {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 12px;
+    cursor: pointer;
+    height: 32px;
+}
+
+.button-plus {
+    background-color: transparent;
+    border: none;
+    color: $c-waterloo;
+    path {
+         fill: $c-waterloo;
+    }
+    span {
+        margin: 0 0 0 6px;
+    }
+}
+
+.input {
+    border: none;
+    background-color: transparent;
+}
+
+.box {
+        background-color: $c-white;
+        border-radius: 8px;
+        padding: 0 16px;
+        height: 50px;
+        margin-bottom: 8px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0px 0px 1px 0px rgba(18, 3, 62, 0.11), 0px 3px 5px 0px rgba(18, 3, 62, 0.10);
+    
+        &:hover {
+            background-color: $c-zircon;
+        }
+}
+
+.wrapper-edit {
+    background-color: $c-zircon;
+    border: 1px solid rgba(0, 125, 252, 0.5);
+    height: 98px;
+    border-radius: 8px;
+    padding: 16px 8px; 
+    width: 100%;
+}

@@ -1,0 +1,50 @@
+.input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-container {
+        display: flex;
+        align-items: center;
+    }
+
+    &:hover .input-icons {
+        display: flex;
+        opacity: 1;
+    }
+
+    &-icons {
+        display: none;
+        opacity: 0;
+        gap: 12px;
+    }
+
+    &-button {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    &-name {
+        width: 148px;
+        margin: 0 12px;
+        text-align: left;
+    }
+
+    &-field {
+        border: none;
+        background-color: transparent;
+        margin: 0 0 0 12px;
+        padding: 6px 2px;
+        width: 202px;
+        font-weight: 400;
+
+        &:focus {
+            outline: none;
+        }
+    }
+}

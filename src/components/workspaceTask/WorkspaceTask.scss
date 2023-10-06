@@ -1,0 +1,13 @@
+@import '../../styles/colors.scss';
+
+.task {
+    display: flex;
+    flex-direction: column;
+    width: 278px;
+
+    &-container{
+        &.arrow {
+            padding: 0 16px 0 8px;
+        }
+    }
+}

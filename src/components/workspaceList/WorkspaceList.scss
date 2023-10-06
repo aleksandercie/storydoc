@@ -1,0 +1,62 @@
+@import '../../styles/colors.scss';
+
+.list{
+    display: flex;
+    gap: 24px;
+    margin-left: 24px;
+    flex-wrap: nowrap; 
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+
+    &-blur{
+        width: 1px;
+        height: 100%;
+        position: absolute;
+        left: -10px;
+        top: 0;
+
+        &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 15px;
+        width: 130px;
+        height: 100%;
+        background: linear-gradient(to right, rgba(244, 247, 254, 1) 5%, rgba(244, 247, 254, 0) 100%);
+        pointer-events: none;
+        z-index: 1;
+      }}
+
+    > div {
+        flex: 0 0 auto;
+    }
+
+    &-add {
+        margin-left: 6px;
+    }
+
+    &-new {
+        display: flex;
+        justify-content: space-between;
+        background-color: $c-selago;
+        padding: 16px 8px;
+        border-radius: 16px;
+        width: 294px;
+        height: fit-content;
+
+
+        button {
+            background-color: transparent;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+    &-container {
+        display: flex;
+        justify-content: center;
+        width: 294px;
+        height: fit-content;
+    }
+}

@@ -1,0 +1,37 @@
+@import '../../styles/colors.scss';
+
+.nav {
+    border-top: 1px solid $c-catskill;
+    padding: 32px 24px;
+
+    &-link {
+        display: flex;
+        align-items: center;
+        margin-bottom: 32px;
+        text-decoration: none;
+
+        &.active {
+            p {
+                color: $c-blue;
+            }
+            path {
+                fill: $c-blue;
+            }
+        }
+
+        &:hover {
+            p {
+                color: $c-blue;
+            }
+            path {
+                fill: $c-blue;
+            }
+        }
+    }
+
+    &-name {
+        margin: 0 0 0 16px;
+        color: $c-submarine;
+    }
+
+}

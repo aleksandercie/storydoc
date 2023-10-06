@@ -1,0 +1,16 @@
+@import '../../styles/colors.scss';
+
+.subtasks {
+    margin-left: 16px;
+
+    &-button {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 8px;
+
+        button {
+            margin-right: 16px;
+        }
+    }
+}

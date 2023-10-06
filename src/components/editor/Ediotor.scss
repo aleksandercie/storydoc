@@ -1,0 +1,149 @@
+@import '../../styles/colors.scss';
+
+.editor {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &-container {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    &:hover .editor-icons {
+        display: flex;
+        opacity: 1;
+    }
+
+    &-icons {
+        display: none;
+        opacity: 0;
+        gap: 12px;
+    }
+
+    &-name {
+        width: 148px;
+        margin: 0 12px 0 8px;
+        text-align: left;
+        font-weight: 400;
+
+        &.bold {
+            font-weight: 600;
+        }
+        &.icon {
+            margin: 0 12px;
+        }
+    }
+
+    &-field {
+        border: none;
+        background-color: transparent;
+        margin: 0 0 0 12px;
+        width: 200px;
+        padding: 0;
+        font-weight: 400;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &-button {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+    &-panel {
+        display: flex;
+        align-items: center;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        cursor: pointer;
+    }
+
+    &:hover .editor-tasks {
+        display: none;
+        opacity: 0;
+    }
+
+    &-tasks {
+        display: flex;
+        opacity: 0.5;
+    }
+
+    height: 24px;
+
+    &.edit {
+        height: auto;
+    }
+
+    &-box {
+        display: flex;
+        align-items: center;
+        margin-bottom: 16px;
+        height: 18px;
+
+        .editor-checkbox {
+            margin-left: 8px;
+        }
+    }
+
+    &-handle {
+        height: 32px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+    }
+
+    button.editor-save {
+        background-color: $c-blue;
+        color: $c-white;
+        padding: 8px 12px 8px 10px;
+        border-radius: 4px;
+        margin: 0 16px 0 8px;
+        border: 1px solid $c-blue;
+        height: 32px;
+
+        &:disabled{
+            color:$c-smoky;
+            background-color: $c-mishka;
+            border: 1px solid $c-chatelle;
+        }
+    }
+
+    button.editor-decline {
+        background-color: transparent;
+        padding: 0;
+        border: none;
+    }
+
+    &-dropdown {
+        display: none;
+        opacity: 0;
+        background-color: transparent;
+        padding: 0;
+        border: none;
+        margin-right: 8px;
+        cursor: pointer;
+
+        &.open {
+            transform: rotate(90deg);
+        }
+        &.show {
+            display: flex;
+            opacity: 1;
+        }
+    }
+
+    &:hover .editor-dropdown {
+        display: flex;
+        opacity: 1;
+    }
+}
