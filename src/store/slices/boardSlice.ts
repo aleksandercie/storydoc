@@ -8,30 +8,10 @@ import {
 } from '../types';
 
 const initialState: BoardInterface | Record<string, never> = {
-  workspaces: [{ name: 'test', id: '1' }],
-  lists: [
-    { name: 'test1', id: '2', workspace: 'test' },
-    { name: 'test2', id: '22312', workspace: 'test' },
-  ],
-  tasks: [
-    {
-      list: 'test1',
-      workspace: 'test',
-      id: '3',
-      name: 'task',
-      subtasks: [],
-      checked: false,
-    },
-    {
-      list: 'test1',
-      workspace: 'test',
-      id: '4',
-      name: 'task2',
-      subtasks: [{ id: '3', name: 'subtask', checked: false }],
-      checked: true,
-    },
-  ],
-  activeWorkspace: 'test',
+  workspaces: [],
+  lists: [],
+  tasks: [],
+  activeWorkspace: '',
 };
 export const boardSlice = createSlice({
   name: 'board',
@@ -211,8 +191,7 @@ export const boardSlice = createSlice({
         return task;
       });
     },
-    reorder: (state, action: PayloadAction<BoardInterface>) => {
-      console.log(state);
+    reorder: (_, action: PayloadAction<BoardInterface>) => {
       return action.payload;
     },
     addSubtask: (

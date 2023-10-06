@@ -13,7 +13,7 @@ export const App = () => {
     <BrowserRouter>
       <Routes>
         <Route
-          path='/'
+          path='/storydoc'
           element={
             <div className='container'>
               <WorkspacesSidebar />
