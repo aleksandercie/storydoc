@@ -39,7 +39,10 @@ export const WorkspaceCard = ({ name, id, isEdit }: WorkspaceCardProps) => {
   const [edit, setEdit] = useState(false);
   const [value, setValue] = useState('');
 
-  const remove = () => dispatch(removeWorkspace(name));
+  const remove = () => {
+    dispatch(removeWorkspace(name));
+    if (activeWorkspace === name) dispatch(setActiveWorkspace(''));
+  };
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) =>
     setValue(e.target.value);
   const handleEdit = useCallback(() => {

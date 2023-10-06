@@ -17,7 +17,7 @@ export const App = () => {
           element={
             <div className='container'>
               <WorkspacesSidebar />
-              {activeWorkspace ? <WorkspaceList /> : null}
+              {activeWorkspace !== '' ? <WorkspaceList /> : null}
             </div>
           }
         />
