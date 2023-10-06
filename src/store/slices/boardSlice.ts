@@ -212,6 +212,7 @@ export const boardSlice = createSlice({
       });
     },
     reorder: (state, action: PayloadAction<BoardInterface>) => {
+      console.log(state);
       return action.payload;
     },
     addSubtask: (

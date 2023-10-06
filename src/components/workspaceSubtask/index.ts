@@ -1,1 +1,1 @@
-export * from './workspaceSubtask';
+export * from './WorkspaceSubtask';
